@@ -266,9 +266,12 @@ http://stackoverflow.com/a/34696029/383904
 	text-decoration: none;
 }
 
-.goods{
-	/*desktop*/
-	width: 40vw;
-	/*mobile*/
-	width: 80vw;
+.goods {
+    /* Default styles for both mobile and desktop */
+    width: 100vw;
+
+    /* Media query for desktop */
+    @media screen and (min-width: 768px) {
+        width: 20vw;
+    }
 }
