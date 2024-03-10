@@ -51,11 +51,6 @@
             }
         }
 
-
-
-// Start the transition
+        // Start the transition
         updateThemeColor();
     }
-
-    
-    changeThemeColor('rgb(0,, 0, 0)');
