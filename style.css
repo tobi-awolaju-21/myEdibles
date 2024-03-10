@@ -131,6 +131,7 @@ http://stackoverflow.com/a/34696029/383904
 /* SLIDER */
 
 .CSSgal .slider {
+	margin-top: 100px;
 	white-space: nowrap;
 	font-size: 0;
 	transition: 0.8s;
