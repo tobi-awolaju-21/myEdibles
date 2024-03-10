@@ -125,7 +125,7 @@ http://stackoverflow.com/a/34696029/383904
 .CSSgal {
 	position: relative;
 	overflow: hidden;
-	height: 90vh;
+	height:auto;
 	
 }
 
