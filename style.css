@@ -27,11 +27,11 @@ h1{
 
 .topbar{
     width: 100vw;
-    height: 14%;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    background-color:rgba(0, 145, 255, 0.83);
+    background: linear-gradient(to bottom, rgba(0, 145, 255, 1) 0%, rgba(0, 145, 255, 0.8) 100%);
     box-shadow: 8px 8px 100px rgb(62, 181, 255);
 
 }
