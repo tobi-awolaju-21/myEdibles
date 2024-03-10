@@ -10,6 +10,8 @@
 
     // change color
     function changeThemeColor(newColor) {
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', newColor);
+
         var topbar = document.querySelector('.topbar');
         topbar.style.backgroundColor = newColor;
     }
