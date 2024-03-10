@@ -125,8 +125,6 @@ http://stackoverflow.com/a/34696029/383904
 .CSSgal {
 	position: relative;
 	overflow: hidden;
-	height:auto;
-	
 }
 
 /* SLIDER */
@@ -189,7 +187,7 @@ http://stackoverflow.com/a/34696029/383904
 /* NAVIGATION */
 
 .CSSgal .bullets {
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 	bottom: 0;
 	padding: 10px 0;
@@ -268,10 +266,10 @@ http://stackoverflow.com/a/34696029/383904
 
 .goods {
     /* Default styles for both mobile and desktop */
-    width: 100vw;
+    width: 80vw;
 
     /* Media query for desktop */
     @media screen and (min-width: 768px) {
-        width: 20vw;
+        width: 30vw;
     }
 }
