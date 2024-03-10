@@ -45,6 +45,7 @@ h1{
 }
 
 .tag-filter {
+user-select: none;
 text-align: center;
 width:19.2%;
 margin: 1px;
@@ -53,6 +54,7 @@ cursor: pointer;
 color: #ffffff;
 background-color: #ffffff00;
 font-size:large;
+
 }
 .shopbutton{
 color:#000000;
