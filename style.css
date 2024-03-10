@@ -33,7 +33,7 @@ h1{
     position: fixed;
     background-color:rgba(0, 145, 255, 0.83);
     box-shadow: 8px 8px 100px rgb(62, 181, 255);
-
+	z-index: 2;
 }
 
 .tag-navigator {
@@ -125,6 +125,7 @@ http://stackoverflow.com/a/34696029/383904
 .CSSgal {
 	position: relative;
 	overflow: hidden;
+	height: 90vh;
 	
 }
 
@@ -263,4 +264,11 @@ http://stackoverflow.com/a/34696029/383904
 	margin: 0 3px;
 	color: rgba(0,0,0,0.8);
 	text-decoration: none;
+}
+
+.goods{
+	/*desktop*/
+	width: 40vw;
+	/*mobile*/
+	width: 80vw;
 }
