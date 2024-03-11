@@ -13,6 +13,7 @@
          <title>✨🍬MyEdibles🍄💊</title>
     </head>
 <body>
+    
     <div class="topbar">
         <div class="tag-navigator">
         <div class="tag-filter" onclick="nextPage('faq')">FAQ</div>
@@ -26,8 +27,30 @@
 <center>
 </center>
 <!--end of top bar-->
-    
+<center>
+    <img src="./image/Contact.png" style="width: 60vw;">
 
+    <h3 onclick="copyToClipboard()" style="font-size: x-small;cursor: pointer;user-select: none;">
+        RGD4ZPFMSGJOUE4BTLTKHJTNNNCTBRUZBFGQU2LEZAWZSX434BHQ 
+    </h3>
+    
+</center>
+
+
+<script>
+    function copyToClipboard() {
+        var textToCopy = document.querySelector('h3').innerText;
+        var tempInput = document.createElement('input');
+        document.body.appendChild(tempInput);
+        tempInput.setAttribute('value', textToCopy);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        
+        alert('Text copied to clipboard!');
+    }
+
+    </script>
 <script src="script.js"></script>
 <script>
     changeThemeColor('rgb(56,67,67)');
