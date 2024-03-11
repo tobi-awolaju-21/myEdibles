@@ -34,7 +34,7 @@ h1{
     flex-wrap: wrap;
     position: fixed;
     background-color:rgba(0, 145, 255, 0.83);
-    box-shadow: 8px 8px 100px rgb(62, 181, 255);
+    box-shadow: 8px 8px 100px rgb(255, 175, 62);
 	z-index: 2;
 }
 
