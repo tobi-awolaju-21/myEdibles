@@ -16,6 +16,11 @@ h4{
 }
 
 
+h3{
+    margin: 8px;
+    color: #ffffff;
+}
+
 h2{
     margin: 8px;
     color: #ffffff;
@@ -26,6 +31,14 @@ h1{
     color: #ffffff;
 }
 
+p{
+	color: #ffffffbb;
+	margin: 4px;
+}
+
+span{
+	color:#fff
+}
 
 .topbar{
     width: 100vw;
@@ -34,7 +47,7 @@ h1{
     flex-wrap: wrap;
     position: fixed;
     background-color:rgba(0, 145, 255, 0.83);
-    box-shadow: 8px 8px 100px rgb(255, 175, 62);
+    box-shadow: 8px 8px 100px rgb(62, 181, 255);
 	z-index: 2;
 }
 
@@ -86,12 +99,22 @@ width: 50%;
 
 
 
+/*shop*/
+.shop{
+	width: 70vw;
+}
 
-
-
-
-
-
+/*order*/
+.balance{
+position: fixed;
+bottom:80px;
+width: 180px;
+color: #ffffff;
+background-color: #ff009d;
+border-radius: 25px;
+right:calc(50vw - 100px);
+padding: 4px;
+}
 
 
 
