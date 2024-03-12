@@ -324,3 +324,20 @@ position: absolute;
         width: 30vw;
     }
 }
+
+
+
+    /* Style for the pop-up */
+    #popup {
+		width: 90vw;
+		font-size: x-small;
+		display: none;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		padding: 10px;
+		background-color: #000000;
+		border: 1px solid #ccc;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	  }
+  
