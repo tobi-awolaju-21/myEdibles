@@ -31,7 +31,7 @@
         // Show the pop-up with the new user ID
         const popup = document.getElementById('popup');
         const userIdSpan = document.getElementById('userId');
-        userIdSpan.textContent = "Track my Orders";
+        userIdSpan.textContent = "Manage Orders";
         popup.style.display = 'block';
     
         // Hide the pop-up after a few seconds (adjust the timeout as needed)
