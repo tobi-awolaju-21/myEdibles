@@ -70,8 +70,8 @@
         <p><strong>${item.name}</strong></p>
         <p>Quantity: <span id="quantity-${index}">${item.quantity}</span></p>
         <p>Price: $${itemPrice.toFixed(2)}</p>
-        <button onclick="increaseQuantity(${index})">+</button>
         <button onclick="decreaseQuantity(${index})">-</button>
+        <button onclick="increaseQuantity(${index})">+</button>
         <button onclick="removeItem(${index})">Remove</button>
         <hr>
       `;
