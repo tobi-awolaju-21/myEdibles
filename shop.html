@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set theme color for Chrome on Android -->
+  <!-- Set theme color for Chrome on Android -->
+  <meta name="theme-color" content="#0091FF">
+
+  <!-- Set status bar style for iOS -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link href="./style.css" rel="stylesheet">
+  <title>✨🍬MyEdibles🍄💊</title>
+
+</head>
+
+<body>
+
+
+
+  <div class="topbar">
+    <div class="tag-navigator">
+      <div class="tag-filter" onclick="nextPage('faq')">FAQ</div>
+      <div class="tag-filter" onclick="nextPage('safety')"> Safety</div>
+      <img onclick="nextPage('index');" src="./image/logo.png"
+        style="width: 19.5%; position: relative; top: -40%; transform: scale(0.4);">
+      <div class="tag-filter" onclick="nextPage('contact')"> Contact</div>
+      <div class="tag-filter" onclick="nextPage('orders')">Orders</div>
+    </div>
+  </div>
+  <center>
+  </center>
+  <!--end of top bar-->
+
+
+
+  <center>
+    <div class="shopbutton"  onclick="goToChart()">Chart</div>
+  </center>
+
+
+  <center>
+    <div class="shop"></div>
+  </center>
+<div style="height: 100px;"></div>
+
+
+<script>
+  // Sample dummy JSON data
+  const dummyData = [
+    {
+      id: 1,
+      imgSrc: './image/blue.png',
+      name: 'Blue Crystal',
+      rating: 4.5,
+      comment: 'Great product!',
+      price: 19.99,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 2,
+      imgSrc: './image/green.png',
+      name: 'Green Snowflakes',
+      rating: 4.5,
+      comment: 'Great product!',
+      price: 19.99,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 3,
+      imgSrc: './image/purple.png',
+      name: 'Purple Flower',
+      rating: 4.5,
+      comment: 'Great product!',
+      price: 19.99,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 4,
+      imgSrc: './image/yellow.png',
+      name: 'Confused',
+      rating: 4.5,
+      comment: 'Great product!',
+      price: 19.99,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 5,
+      imgSrc: './image/red.png',
+      name: 'Red Pill',
+      rating: 4.5,
+      comment: 'Great product!',
+      price: 19.99,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    // Add more items as needed
+  ];
+
+  // Function to create a shopping view for each item
+  function createShoppingView(item) {
+    const shopDiv = document.querySelector('.shop');
+
+    const shopItem = document.createElement('div');
+    shopItem.classList.add('shop-item');
+
+    shopItem.innerHTML = `
+      <img style="width:25vw; margin-top:100px" src="${item.imgSrc}" alt="${item.name}">
+      <h3>${item.name}</h3>
+      <p>Rating: ${item.rating}</p>
+      <p>Comment: ${item.comment}</p>
+      <p>Price: $${item.price}</p>
+      <p>Description: ${item.description}</p>
+      <button style="background-color:#9e9e9e; color:#fff; border-radius:50px; width:aut;height:40px" onclick="addToCart(${item.id})">Add to Cart</button>
+      <button style="background-color:#9e9e9e; color:#fff; border-radius:50px; width:40px;height:40px" onclick="updateQuantity(${item.id}, 'decrease')">-</button>
+      <span id="quantity-${item.id}">0</span>
+      <button style="background-color:#9e9e9e; color:#fff; border-radius:50px; width:40px;height:40px" onclick="updateQuantity(${item.id}, 'increase')">+</button>
+    `;
+
+    shopDiv.appendChild(shopItem);
+  }
+
+
+
+
+
+// Function to add items to the cart and update the chart
+function addToCart(itemId) {
+    // Retrieve selected items from localStorage or initialize an empty array
+    const selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+
+    // Find the selected item in the dummyData array
+    const selectedItem = dummyData.find(item => item.id === itemId);
+
+    // Check if the item is already in the cart
+    const existingItem = selectedItems.find(item => item.id === itemId);
+
+    if (existingItem) {
+        // If the item is already in the cart, increase the quantity
+        existingItem.quantity++;
+    } else {
+        // If the item is not in the cart, add it with a quantity of 1
+        selectedItems.push({
+            id: selectedItem.id,
+            name: selectedItem.name,
+            price: selectedItem.price, // Added this line to store the price in the cart
+            quantity: 1,
+        });
+    }
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+
+    // Refresh the display
+    updateQuantityDisplay(itemId);
+    console.log(`Item with ID ${itemId} added to the cart.`);
+}
+
+
+
+
+
+
+
+
+  // Function to update the quantity display when clicking "-" or "+"
+  function updateQuantity(itemId, action) {
+    // Retrieve selected items from localStorage
+    let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+
+    // Find the item in the cart
+    const selectedItem = selectedItems.find(item => item.id === itemId);
+
+    // If the item is in the cart, update the quantity based on the action
+    if (selectedItem) {
+      if (action === 'increase') {
+        selectedItem.quantity++;
+      } else if (action === 'decrease' && selectedItem.quantity > 0) {
+        selectedItem.quantity--;
+      }
+
+      // Save the updated cart to localStorage
+      localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+
+      // Refresh the display
+      updateQuantityDisplay(itemId);
+      console.log(`Quantity of item with ID ${itemId} updated.`);
+    }
+  }
+
+// Function to update the quantity display on the page
+function updateQuantityDisplay(itemId) {
+    // Retrieve selected items from localStorage
+    let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+
+    // Find the index of the item in the cart
+    const itemIndex = selectedItems.findIndex(item => item.id === itemId);
+
+    // Update the quantity display on the page
+    const quantitySpan = document.getElementById(`quantity-${itemId}`);
+    if (quantitySpan) {
+        if (selectedItems[itemIndex]) {
+            quantitySpan.textContent = selectedItems[itemIndex].quantity;
+            // If the quantity is 0, remove the item from the cart and update localStorage
+            if (selectedItems[itemIndex].quantity === 0) {
+                selectedItems.splice(itemIndex, 1);
+                localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+                // Refresh the display
+                displayChartItems();
+            }
+        } else {
+            quantitySpan.textContent = 0;
+        }
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // Function to redirect to the chart page
+  function goToChart() {
+    // Replace 'chart.html' with the actual path to your chart page
+    window.location.href = 'orders.html';
+  }
+
+  // Display shopping views for each item
+  dummyData.forEach(createShoppingView);
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
