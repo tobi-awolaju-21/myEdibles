@@ -70,7 +70,7 @@
        <div>
        <div style="display:flex;width:75vw;">
         <p><strong>${item.name}</strong></p>
-        <p>Quantity: <span id="quantity-${index}">${item.quantity}</span></p>
+        <p> Quantity: <span style="color:#8fc7ff;" id="quantity-${index}">${item.quantity}</span></p>
         <p style="color:#ffa4dc;">Price: $${itemPrice.toFixed(2)}</p>
        </div>
 
@@ -187,13 +187,15 @@
         const itemPrice = item.quantity * item.price; // Calculate item price
         totalSumPrice += itemPrice; // Add item price to total sum
   
-        itemDiv.innerHTML = `
+
+  
+      itemDiv.innerHTML = `
       <div style="display:flex; height:25vw;">
        <img style="width:25vw;" src="${item.imgSrc}" alt="${item.name}">
        <div>
        <div style="display:flex;width:75vw;">
         <p><strong>${item.name}</strong></p>
-        <p>Quantity: <span id="quantity-${index}">${item.quantity}</span></p>
+        <p> Quantity: <span style="color:#8fc7ff;" id="quantity-${index}">${item.quantity}</span></p>
         <p style="color:#ffa4dc;">Price: $${itemPrice.toFixed(2)}</p>
        </div>
 
@@ -209,6 +211,10 @@
        </div>
         
       `;
+
+
+
+
         chartItemsDiv.appendChild(itemDiv);
       });
   
