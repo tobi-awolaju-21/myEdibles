@@ -31,12 +31,12 @@
         // Show the pop-up with the new user ID
         const popup = document.getElementById('popup');
         const userIdSpan = document.getElementById('userId');
-        userIdSpan.textContent = userId;
+        userIdSpan.textContent = "Copy SHA256";
         popup.style.display = 'block';
     
         // Hide the pop-up after a few seconds (adjust the timeout as needed)
         setTimeout(() => {
-          popup.style.display = 'none';
+          //popup.style.display = 'none';
         }, 5000); // 5000 milliseconds = 5 seconds
       }
   
