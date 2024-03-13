@@ -348,6 +348,12 @@ position: absolute;
     border-radius: 50px;
 }
 
+
+/* Style for individual tag buttons when clicked */
+.tag-filterx:active {
+    background-color: #fff;
+}
+
 /* Style for the scrollbar */
 .tag-navigatorx::-webkit-scrollbar {
  background-color: #ff009d00;

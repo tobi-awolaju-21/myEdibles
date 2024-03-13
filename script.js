@@ -26,7 +26,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     // Scrolling up, show the tag navigator
     tagNavigator.style.display = 'flex';
-    
+
   } else {
     // Scrolling down, hide the tag navigator
     tagNavigator.style.display = 'none'; // You can adjust the value as needed
@@ -34,3 +34,28 @@ window.onscroll = function() {
 
   prevScrollpos = currentScrollPos;
 };
+
+
+
+
+
+       //function to filter items
+       function filterProjects(tag) {
+
+
+
+
+        
+       // Change the color of the clicked button to red and others to blue
+       const tagButtons = document.querySelectorAll('.tag-filterx');
+       tagButtons.forEach(button => {
+         if (button.textContent.toLowerCase() === tag.toLowerCase()) {
+           button.style.backgroundColor = '#fff'; // Change to blue
+           button.style.color = '#000'; // Change to white
+         } else {
+           button.style.backgroundColor = '#e7e7e76f'; // Change to grey
+           button.style.color = '#000000'; // Change to black
+         }
+       }); 
+
+       }
