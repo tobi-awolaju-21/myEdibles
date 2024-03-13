@@ -62,6 +62,9 @@
 <div style="height: 100px;"></div>
 
 
+
+
+
 <script>
   // Sample dummy JSON data
   const dummyData = [
@@ -133,10 +136,6 @@
     shopDiv.appendChild(shopItem);
   }
 
-
-
-
-
 // Function to add items to the cart and update the chart
 function addToCart(itemId) {
     // Retrieve selected items from localStorage or initialize an empty array
@@ -169,13 +168,6 @@ function addToCart(itemId) {
     updateQuantityDisplay(itemId);
     console.log(`Item with ID ${itemId} added to the cart.`);
 }
-
-
-
-
-
-
-
 
   // Function to update the quantity display when clicking "-" or "+"
   function updateQuantity(itemId, action) {
@@ -226,31 +218,7 @@ function updateQuantityDisplay(itemId) {
             quantitySpan.textContent = 0;
         }
     }
-}
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+}  
   // Function to redirect to the chart page
   function goToChart() {
     // Replace 'chart.html' with the actual path to your chart page
@@ -261,7 +229,12 @@ function updateQuantityDisplay(itemId) {
   dummyData.forEach(createShoppingView);
 </script>
 
+
+
 <script src="script.js"></script>
+<script>
+  changeThemeColor('rgb(62, 181, 255)');
+</script>
 
 </body>
 </html>
