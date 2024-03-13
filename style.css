@@ -363,15 +363,3 @@ position: absolute;
 }
 
 
-/* Style for body's scrollbar */
-body::-webkit-scrollbar {
-    background-color: #ff009d00; /* Correct alpha value (transparent) */
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #00000000; /* Set the color of the scrollbar thumb */
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #e7e7e700; /* Set the color of the scrollbar track */
-}
