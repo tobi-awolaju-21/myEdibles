@@ -50,7 +50,7 @@ window.onscroll = function() {
        const tagButtons = document.querySelectorAll('.tag-filterx');
        tagButtons.forEach(button => {
          if (button.textContent.toLowerCase() === tag.toLowerCase()) {
-           button.style.backgroundColor = '#0460ff77'; // Change to blue
+           button.style.backgroundColor = '#3EB5FF'; // Change to blue
            button.style.color = '#fff'; // Change to white
          } else {
            button.style.backgroundColor = '#5b647477'; // Change to grey
