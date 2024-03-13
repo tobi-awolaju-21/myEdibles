@@ -27,17 +27,6 @@
       async function showUserIdPopup() {
         const userId = await generateUniqueId();
         localStorage.setItem('userId', userId);
-    
-        // Show the pop-up with the new user ID
-        const popup = document.getElementById('popup');
-        const userIdSpan = document.getElementById('userId');
-        userIdSpan.textContent = "Manage Orders";
-        popup.style.display = 'block';
-    
-        // Hide the pop-up after a few seconds (adjust the timeout as needed)
-        setTimeout(() => {
-          //popup.style.display = 'none';
-        }, 5000); // 5000 milliseconds = 5 seconds
       }
   
       // Call the function to show the pop-up
