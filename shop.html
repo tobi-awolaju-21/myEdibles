@@ -111,9 +111,7 @@
     shopItem.innerHTML = `
       <img style="width:25vw; margin-top:100px" src="${item.imgSrc}" alt="${item.name}">
       <h3>${item.name}</h3>
-      <p>Rating: ${item.rating}</p>
-      <p>Comment: ${item.comment}</p>
-      <p>Price: ₦${item.price}</p>
+      <p style="color:#8fc7ff;">Price: ₦${item.price}</p>
       <p>Description: ${item.description}</p>
       <button style="background-color:#9e9e9e; color:#fff; border-radius:50px; width:aut;height:40px" onclick="addToCart(${item.id})">Add to Cart</button>
       <span id="quantity-${item.id}">0</span>
