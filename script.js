@@ -5,10 +5,6 @@
         window.location.href = pageName+'.html';
     }
 
-
-
-
-    // change color
    // change color
 function changeThemeColor(newColor) {
     document.querySelector('meta[name="theme-color"]').setAttribute('content', newColor);

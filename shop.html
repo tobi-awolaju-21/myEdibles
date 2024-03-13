@@ -16,16 +16,14 @@
 </head>
 
 <body>
-
-
   <div class="topbar">
     <div class="tag-navigator">
-      <div class="tag-filter" onclick="nextPage('faq')">FAQ</div>
-      <div class="tag-filter" onclick="nextPage('contact')"> Contact</div>
+      <div style ="opacity:0.4" class="tag-filter" onclick="nextPage('faq')">FAQ</div>
+      <div style ="opacity:0.4" class="tag-filter" onclick="nextPage('contact')"> Contact</div>
       <img onclick="nextPage('index');" src="./image/logo.png"
-        style="width: 19.5%; position: relative; top: -40%; transform: scale(0.4);">
-      <div class="tag-filter" onclick="nextPage('chart')"> Chart</div>
-      <div class="tag-filter" onclick="nextPage('orders')">Orders</div>
+        style="opacity:1; width: 19.5%; position: relative; top: -40%; transform: scale(0.4);">
+      <div style ="opacity:0.4" class="tag-filter" onclick="nextPage('chart')"> Chart</div>
+      <div style ="opacity:0.4" class="tag-filter" onclick="nextPage('orders')">Orders</div>
     </div>
   </div>
   <center>
@@ -33,11 +31,25 @@
   <!--end of top bar-->
 
 
+  <center>
 
+    <div class="tag-navigatorx">
+      <button class="tag-filterx" onclick="filterProjects('All')">All</button> <button class="tag-filterx" onclick="filterProjects('AI&GPTs')">AI&GPTs</button>
+      <button class="tag-filterx" onclick="filterProjects('Backend')">Backend</button>
+      <button class="tag-filterx" onclick="filterProjects('Blockchain')">Blockchain</button>
+      <button class="tag-filterx" onclick="filterProjects('Bubble.io')">Bubble.io</button>
+      <button class="tag-filterx" onclick="filterProjects('Frontend')">Frontend</button>
+      <button class="tag-filterx" onclick="filterProjects('Fullstack')">Fullstack</button>
+      <button class="tag-filterx" onclick="filterProjects('IOT')">IOT</button>
+      <button class="tag-filterx" onclick="filterProjects('Integrations')">Integrations</button>
+      <button class="tag-filterx" onclick="filterProjects('robotics')">robotics</button>
+      <button class="tag-filterx" onclick="filterProjects('UI/UX')">UI/UX</button>
+      <button class="tag-filterx" onclick="filterProjects('WebApp')">WebApp</button>
+    </div>
 
+  </center>
 
-
-
+  <div style="height: 100px;"></div>
 
   <center>
     <div class="shopbutton"  onclick="goToChart()">Chart</div>
@@ -138,7 +150,7 @@ function addToCart(itemId) {
 
     if (existingItem) {
         // If the item is already in the cart, increase the quantity
-        existingItem.quantity++;
+        existingItem.quantity++;    
     } else {
         // If the item is not in the cart, add it with a quantity of 1
         selectedItems.push({
