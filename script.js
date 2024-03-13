@@ -50,12 +50,12 @@ window.onscroll = function() {
        const tagButtons = document.querySelectorAll('.tag-filterx');
        tagButtons.forEach(button => {
          if (button.textContent.toLowerCase() === tag.toLowerCase()) {
-           button.style.backgroundColor = '#fff'; // Change to blue
-           button.style.color = '#000'; // Change to white
+           button.style.backgroundColor = '#0460ff77'; // Change to blue
+           button.style.color = '#fff'; // Change to white
          } else {
-           button.style.backgroundColor = '#e7e7e76f'; // Change to grey
-           button.style.color = '#000000'; // Change to black
+           button.style.backgroundColor = '#5b647477'; // Change to grey
+           button.style.color = '#ffffff77'; // Change to black
          }
        }); 
+}
 
-       }

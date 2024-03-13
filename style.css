@@ -342,17 +342,12 @@ position: absolute;
     margin: 6px;
     padding: 5px 10px;
     cursor: pointer;
-    background-color: #e7e7e76f;
-    color: #000000;
+    background-color: #5b647477;
+    color: #ffffff77;
     border: none;
     border-radius: 50px;
 }
 
-
-/* Style for individual tag buttons when clicked */
-.tag-filterx:active {
-    background-color: #fff;
-}
 
 /* Style for the scrollbar */
 .tag-navigatorx::-webkit-scrollbar {
