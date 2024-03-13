@@ -326,13 +326,19 @@ position: absolute;
 }
 
   
-.tag-navigatorx{
-	position: fixed;
-	top:70px;
-	z-index: 3;
-  }
-  
-  .tag-filterx{
+/* Style for the container with horizontal scrolling */
+.tag-navigatorx {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    z-index: 3;
+    overflow-x: auto;
+    min-height: 40px;
+    width: 100%;
+}
+
+/* Style for individual tag buttons */
+.tag-filterx {
     margin: 6px;
     padding: 5px 10px;
     cursor: pointer;
@@ -340,4 +346,17 @@ position: absolute;
     color: #000000;
     border: none;
     border-radius: 50px;
-  }
+}
+
+/* Style for the scrollbar */
+.tag-navigatorx::-webkit-scrollbar {
+ background-color: #ff009d00;
+}
+
+.tag-navigatorx::-webkit-scrollbar-thumb {
+    background-color: #ff000000; /* Set the color of the scrollbar thumb */
+}
+
+.tag-navigatorx::-webkit-scrollbar-track {
+    background-color: #e7e7e700; /* Set the color of the scrollbar track */
+}
