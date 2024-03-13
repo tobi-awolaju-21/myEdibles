@@ -13,3 +13,24 @@ function changeThemeColor(newColor) {
     topbar.style.backgroundColor = newColor;
     topbar.style.boxShadow = '0 8px 100px ' + newColor;
 }
+
+
+
+// JavaScript to handle scrolling and show/hide the tag navigator
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  const tagNavigator = document.querySelector('.tag-navigatorx');
+
+  if (prevScrollpos > currentScrollPos) {
+    // Scrolling up, show the tag navigator
+    tagNavigator.style.display = 'flex';
+    
+  } else {
+    // Scrolling down, hide the tag navigator
+    tagNavigator.style.display = 'none'; // You can adjust the value as needed
+  }
+
+  prevScrollpos = currentScrollPos;
+};
