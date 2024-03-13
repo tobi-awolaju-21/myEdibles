@@ -233,10 +233,18 @@
       const overallTotal = selectedItems.reduce((total, item) => total + item.price * item.quantity, 0);
   
       // Display a window alert with the order summary
-      alert(`Order Summary:\n\n${orderSummary}\n\nTotal Price: $${overallTotal.toFixed(2)}`);
-  
+     /// alert(`Order Summary:\n\n${orderSummary}\n\nTotal Price: $${overallTotal.toFixed(2)}`);
       // Clear the chart
-      localStorage.removeItem('selectedItems');
+     // localStorage.removeItem('selectedItems');
+
+// Get order details from localStorage
+const orderid = localStorage.getItem('userId');
+// Display a window alert with the order summary
+alert(`Order Summary:\n\n${orderSummary}\n\nTotal Price: $${overallTotal.toFixed(2)}`);
+// Redirect to the Paystack payment URL
+const paystackURL = `https://paystack.com/pay/-dszhki9g4?amount=${overallTotal.toFixed(2)}&order=${orderSummary}&orderid=${orderid}`;
+window.location.href = paystackURL;
+
       displayChartItems();
     }
   </script>
