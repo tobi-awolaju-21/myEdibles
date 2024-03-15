@@ -75,15 +75,14 @@ font-size:large;
 color:#000000;
 background-color: rgb(255, 255, 255);
 border-radius: 360px;
-width: 200px;
+width: 80vw;
 font-size: large;
 font-weight: bold;
-padding: 8px;
+padding: 20px;
 position: fixed;
+right:calc(5vw);
 bottom:0px;
-right:calc(50vw - 100px);
 margin-bottom: 30px;
-
 box-shadow: 8px 8px 100px rgb(0, 132, 255);
 
 }
