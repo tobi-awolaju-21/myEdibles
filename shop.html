@@ -66,7 +66,7 @@
   const dummyData = [
   {
     "id": 1,
-    "imgSrc": "./image/Chips.webp",
+    "imgSrc": "./image/green.png",
     "name": "Chips",
     "rating": 4.5,
     "comment": "Great product!",
@@ -76,7 +76,7 @@
   },
   {
     "id": 2,
-    "imgSrc": "./image/GranolaBars.webp",
+    "imgSrc": "./image/red.png",
     "name": "Granola Bars",
     "rating": 4.2,
     "comment": "Healthy snack option!",
@@ -374,7 +374,7 @@
     shopItem.classList.add('shop-item');
 
     shopItem.innerHTML = `
-      <img style="width:25vw; margin-top:100px" src="${item.imgSrc}" alt="${item.name}">
+      <img style="width:50vw; margin-top:100px" src="${item.imgSrc}" alt="${item.name}">
       <h3>${item.name}</h3>
       <p style="color:#8fc7ff;">Price: ₦${item.price}</p>
       <p>Description: ${item.description}</p>
