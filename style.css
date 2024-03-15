@@ -85,7 +85,7 @@ font-size:large;
 	bottom: 0; /* Removed unnecessary pixel value */
 	left: 50%; /* Added horizontal centering */
 	transform: translateX(-50%); /* Center the button horizontally */
-	margin-bottom: 20px; /* Removed bottom margin as button is positioned at bottom */
+	margin-bottom: 40px; /* Removed bottom margin as button is positioned at bottom */
 	box-shadow: 8px 8px 100px rgb(0, 132, 255);
   }
 
@@ -108,7 +108,7 @@ width: 50%;
 /*order*/
 .balance{
 position: fixed;
-bottom:80px;
+bottom:100px;
 width: 180px;
 color: #ffffff;
 background-color: #ff009d;
