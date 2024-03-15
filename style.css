@@ -71,21 +71,23 @@ background-color: #ffffff00;
 font-size:large;
 
 }
-.shopbutton{
-color:#000000;
-background-color: rgb(255, 255, 255);
-border-radius: 360px;
-width: 80vw;
-font-size: large;
-font-weight: bold;
-padding: 20px;
-position: fixed;
-right:calc(80vw / 12);
-bottom:0px;
-margin-bottom: 30px;
-box-shadow: 8px 8px 100px rgb(0, 132, 255);
 
-}
+
+.shopbutton {
+	color: #000000;
+	background-color: rgb(255, 255, 255);
+	border-radius: 360px;
+	width: 60vw;
+	font-size: large;
+	font-weight: bold;
+	padding: 15px;
+	position: fixed;
+	bottom: 0; /* Removed unnecessary pixel value */
+	left: 50%; /* Added horizontal centering */
+	transform: translateX(-50%); /* Center the button horizontally */
+	margin-bottom: 20px; /* Removed bottom margin as button is positioned at bottom */
+	box-shadow: 8px 8px 100px rgb(0, 132, 255);
+  }
 
 .divider{
 background-color: #ffffff2e;
