@@ -41,21 +41,17 @@ window.onscroll = function() {
 
        //function to filter items
        function filterProjects(tag) {
-
-
-
-
         
-       // Change the color of the clicked button to red and others to blue
-       const tagButtons = document.querySelectorAll('.tag-filterx');
-       tagButtons.forEach(button => {
-         if (button.textContent.toLowerCase() === tag.toLowerCase()) {
-           button.style.backgroundColor = '#3EB5FF'; // Change to blue
-           button.style.color = '#fff'; // Change to white
-         } else {
-           button.style.backgroundColor = '#5b647477'; // Change to grey
-           button.style.color = '#ffffff77'; // Change to black
-         }
-       }); 
-}
+        // Change the color of the clicked button to red and others to blue
+        const tagButtons = document.querySelectorAll('.tag-filterx');
+        tagButtons.forEach(button => {
+          if (button.textContent.toLowerCase() === tag.toLowerCase()) {
+            button.style.backgroundColor = '#3EB5FF'; // Change to blue
+            button.style.color = '#fff'; // Change to white
+          } else {
+            button.style.backgroundColor = '#5b647477'; // Change to grey
+            button.style.color = '#ffffff77'; // Change to black
+          }
+        }); 
+ }
 
